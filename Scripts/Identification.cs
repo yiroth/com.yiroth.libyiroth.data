@@ -24,11 +24,8 @@ namespace LibYiroth.Data
 
     public enum IdentificationTypes
     {
-        [InspectorName("None")]
         None = 0,
-        [InspectorName("Data")]
         Data,
-        [InspectorName("Level")]
         Level
     }
 
