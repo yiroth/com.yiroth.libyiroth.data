@@ -4,6 +4,7 @@
  *  Purpose: Identification for literally anything
 */
 
+using System;
 using UnityEngine;
 
 namespace LibYiroth.Data
@@ -30,7 +31,7 @@ namespace LibYiroth.Data
     }
 
     [System.Serializable]
-    public struct Identification : System.IEquatable<Identification>
+    public struct Identification : IEquatable<Identification>
     {
         public IdentificationCategories category;
         public IdentificationTypes type;
@@ -220,7 +221,17 @@ namespace LibYiroth.Data
 
         public override int GetHashCode()
         {
-            return System.HashCode.Combine((int)category, (int)type, identifier);
+            return HashCode.Combine((int)category, (int)type, identifier);
+        }
+
+        public static bool operator ==(Identification left, Identification right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(Identification left, Identification right)
+        {
+            return !left.Equals(right);
         }
     }
 }
