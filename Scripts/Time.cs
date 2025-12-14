@@ -16,13 +16,16 @@
  * Purpose: Structure to manage time information
  */
 
+using UnityEngine;
+
 namespace LibYiroth.Data
 {
+    [System.Serializable]
     public struct Time
     {
-        private int _hour;
-        private int _minute;
-        private int _second;
+        [SerializeField] private int _hour;
+        [SerializeField] private int _minute;
+        [SerializeField] private int _second;
 
         public Time(int hour = 0, int minute = 0, int second = 0)
         {
