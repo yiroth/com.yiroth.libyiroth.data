@@ -213,7 +213,7 @@ namespace LibYiroth.Data
 
         public bool ValidIdentifier(string check)
         {
-            return !string.IsNullOrEmpty(check) && check.Split(' ').Length == 0;
+            return !string.IsNullOrEmpty(check) && !check.Contains(" ");
         }
 
         public bool ValidIdentifier()
