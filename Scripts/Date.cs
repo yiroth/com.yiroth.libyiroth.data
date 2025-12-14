@@ -18,11 +18,12 @@
 
 namespace LibYiroth.Data
 {
+    [System.Serializable]
     public struct Date
     {
-        private int _year;
-        private int _month;
-        private int _day;
+        [UnityEngine.SerializeField] private int _year;
+        [UnityEngine.SerializeField] private int _month;
+        [UnityEngine.SerializeField] private int _day;
 
         public Date(int year = 0, int month = 0, int day = 0)
         {
