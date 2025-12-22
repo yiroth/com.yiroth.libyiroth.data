@@ -34,17 +34,17 @@ namespace LibYiroth.Data
             _second = second;
         }
 
-	    public int GetHours()
+	    public readonly int GetHours()
         { 
             return _hour;
         }
 
-	    public int GetMinutes()
+	    public readonly int GetMinutes()
         { 
             return _minute;
         }
 
-	    public int GetSeconds()
+	    public readonly int GetSeconds()
         { 
             return _second;
         }
@@ -79,7 +79,7 @@ namespace LibYiroth.Data
             _second = value;
         }
 
-        public int GetTotalSeconds()
+        public readonly int GetTotalSeconds()
         { 
             return (_hour * 3600) + (_minute * 60) + _second; 
         }
