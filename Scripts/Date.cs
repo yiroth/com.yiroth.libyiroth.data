@@ -32,9 +32,9 @@ namespace LibYiroth.Data
             _day = day;
         }
 
-        public int GetYears() => _year;
-        public int GetMonths() => _month;
-        public int GetDays() => _day;
+        public readonly int GetYears() => _year;
+        public readonly int GetMonths() => _month;
+        public readonly int GetDays() => _day;
 
         public void AddYears(int value = 1) => _year += value;
         public void AddMonths(int value = 1) => _month += value;
