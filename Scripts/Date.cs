@@ -16,32 +16,34 @@
  * Purpose: Structure to manage date information
  */
 
+using UnityEngine;
+
 namespace LibYiroth.Data
 {
     [System.Serializable]
     public struct Date
     {
-        [UnityEngine.SerializeField] private int _year;
-        [UnityEngine.SerializeField] private int _month;
-        [UnityEngine.SerializeField] private int _day;
+        [SerializeField] private int year;
+        [SerializeField] private int month;
+        [SerializeField] private int day;
 
         public Date(int year = 0, int month = 0, int day = 0)
         {
-            _year = year;
-            _month = month;
-            _day = day;
+            this.year = year;
+            this.month = month;
+            this.day = day;
         }
 
-        public readonly int GetYears() => _year;
-        public readonly int GetMonths() => _month;
-        public readonly int GetDays() => _day;
+        public readonly int GetYears() => year;
+        public readonly int GetMonths() => month;
+        public readonly int GetDays() => day;
 
-        public void AddYears(int value = 1) => _year += value;
-        public void AddMonths(int value = 1) => _month += value;
-        public void AddDays(int value = 1) => _day += value;
+        public void AddYears(int value = 1) => year += value;
+        public void AddMonths(int value = 1) => month += value;
+        public void AddDays(int value = 1) => day += value;
 
-        public void SetYears(int value) => _year = value;
-        public void SetMonths(int value) => _month = value;
-        public void SetDays(int value) => _day = value;
+        public void SetYears(int value) => year = value;
+        public void SetMonths(int value) => month = value;
+        public void SetDays(int value) => day = value;
     }
 }
