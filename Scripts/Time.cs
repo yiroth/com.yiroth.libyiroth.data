@@ -23,65 +23,76 @@ namespace LibYiroth.Data
     [System.Serializable]
     public struct Time
     {
-        [SerializeField] private int _hour;
-        [SerializeField] private int _minute;
-        [SerializeField] private int _second;
+        [SerializeField] private int hour;
+        [SerializeField] private int minute;
+        [SerializeField] private int second;
 
         public Time(int hour = 0, int minute = 0, int second = 0)
         {
-            _hour = hour;
-            _minute = minute;
-            _second = second;
+            this.hour = hour;
+            this.minute = minute;
+            this.second = second;
         }
 
 	    public readonly int GetHours()
         { 
-            return _hour;
+            return hour;
         }
 
 	    public readonly int GetMinutes()
         { 
-            return _minute;
+            return minute;
         }
 
 	    public readonly int GetSeconds()
         { 
-            return _second;
+            return second;
         }
 
 	    public void AddHours(int value = 1)
         { 
-            _hour += value;
+            hour += value;
         }
 
 	    public void AddMinutes(int value = 1)
         { 
-            _minute += value;
+            minute += value;
         }
 
 	    public void AddSeconds(int value = 1)
         { 
-            _second += value;
+            second += value;
         }
 
 	    public void SetHours(int value)
         { 
-            _hour = value;
+            hour = value;
         }
 
 	    public void SetMinutes(int value) 
         { 
-            _minute = value;
+            minute = value;
         }
 
 	    public void SetSeconds(int value)
         { 
-            _second = value;
+            second = value;
         }
 
         public readonly int GetTotalSeconds()
         { 
-            return (_hour * 3600) + (_minute * 60) + _second; 
+            return (hour * 3600) + (minute * 60) + second; 
         }
+
+        public static Time GetTimeFromSeconds(int totalSeconds)
+        {
+            totalSeconds = Mathf.Clamp(totalSeconds, 0, 86400);
+
+            int hours = totalSeconds / 3600;
+            int minutes = (totalSeconds % 3600) / 60;
+            int seconds = totalSeconds % 60;
+
+            return new Time(hours, minutes, seconds);
+        }        
     }
 }
