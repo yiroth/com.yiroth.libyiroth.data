@@ -21,6 +21,26 @@ using System.Collections.Generic;
 
 namespace LibYiroth.Data
 {
+    public enum AttributeEvents
+    {
+        AddHealth,
+        RemoveHealth,
+        AddStamina,
+        RemoveStamina,
+        AddMana,
+        RemoveMana,
+        AddExperience,
+        RemoveExperience
+    }
+
+    [System.Serializable]
+    public struct EventAttributeContainer
+    {
+        public AttributeEvents attributeEventsList;
+        [Helper.Editor.HideAttribute]
+        public Variant.Container attributeContainer;
+    }
+    
     [CreateAssetMenu(fileName = "Node", menuName = "LibYiroth/Data/New Node", order = 0)]
     public class Node : ScriptableObject
     {
@@ -28,5 +48,6 @@ namespace LibYiroth.Data
         public string nodeName;
         public string nodeDescription;
         public List<Variant.Container> attributeContainer;
+        public List<EventAttributeContainer> attributeEventContainer;
     }
 }
