@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Purpose: Structure to manage date information
+ * Purpose: A structure for managing the date information
  */
 
 using UnityEngine;
