@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using LibYiroth.Helper.Editor;
+using Ashrose.Helper.Editor;
 using UnityEngine;
 
-namespace LibYiroth.Data
+namespace Ashrose.Data
 {
     [System.Serializable]
     public struct CurveData
@@ -11,7 +11,7 @@ namespace LibYiroth.Data
         public Variant.Container value;
     }
     
-    [CreateAssetMenu(fileName = "Curve Asset", menuName = "LibYiroth/Data/Curve Asset")]
+    [CreateAssetMenu(fileName = "Curve Asset", menuName = "Ashrose/Data/Curve Asset")]
     public class Curve : ScriptableObject
     {
         [SerializeField]
