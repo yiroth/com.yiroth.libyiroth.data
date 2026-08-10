@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 yiroth
+ * Copyright 2025 Ashrose
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace LibYiroth.Data
+namespace Ashrose.Data
 {
     public enum AttributeEvents
     {
@@ -41,7 +41,7 @@ namespace LibYiroth.Data
         public Variant.Container attributeContainer;
     }
     
-    [CreateAssetMenu(fileName = "Node", menuName = "LibYiroth/Data/New Node", order = 0)]
+    [CreateAssetMenu(fileName = "Node", menuName = "Ashrose/Data/New Node", order = 0)]
     public class Node : ScriptableObject
     {
         public Identification nodeID;
