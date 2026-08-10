@@ -1,6 +1,6 @@
 {
-    "name": "LibYiroth.Data",
-    "rootNamespace": "LibYiroth.Data",
+    "name": "Ashrose.Data",
+    "rootNamespace": "Ashrose.Data",
     "references": [
         "GUID:38e73918b09b001469f9a9388072b54c",
         "GUID:4703e8c27ee5a1d4f8bae7178ed17962"
